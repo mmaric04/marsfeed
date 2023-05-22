@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html>
+    <head lang="en-HR">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Martina Marić">
+      <link rel="stylesheet" href="styles/styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+      <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+      <title>MarsFeed</title>
+    </head>
+
+    <body>
+        <!--header za stranicu-->
+        <div class="header">
+            <!--Logo-->
+            <div>
+                <img src="images/logo.png" id="first_picture">
+                <h1>MarsFeed</h1>
+            </div>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <!--Korisnikov profil-->
+            <div>
+                <h3>
+                    <a href="#">Laura James</a>
+                </h3>
+                <img src="images/avatar.png" class="second_picture">
+            </div>
+        </div>
+
+        <!--navigational meni za stranicu-->
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Info</a>
+            <a href="#">Profile</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <!--content stranice-->
+        <div class="row">
+            <div class="side">
+                <h2>About Me</h2>
+                <h5>Photo of me:</h5>
+                <div class="img_me"><img src="images/profile_photo.jpg"></div>
+                <p>
+                  Hello there! &#128522;<br>
+                  My name is Laura James (25) and I am super into space.&#128640;<br>
+                  I just love looking at the stars and thinking that the universe is<br> so large and we are so little compared to it.<br>
+                  Anyhow, I love this page! &#128150;
+                </p>
+                <br>
+                <h3>Picture Album</h3>
+                <p>Here are some of my pictures!.</p>
+                <div class="slideshow-container">
+                  <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="images/nightsky_city.jpg" style="width:100%">
+                    <div class="text">This is me, enjoying my time outdoors.</div>
+                  </div>
+              
+                  <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="images/nightsky_park.jpg" style="width:100%">
+                    <div class="text">This is also me, enjoying my time in the park.</div>
+                  </div>
+              
+                  <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="images/friendship.jpg" style="width:100%">
+                    <div class="text">&#128150;&#128150;&#128150;&#128150;</div>
+                  </div>
+              
+                  <a class="prev" onclick="plusSlides(-1)">❮</a>
+                  <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+
+            </div>
+
+            <div class="main">
+              <!--Post box-->
+              <div class="widget-post" aria-labelledby="post-header-title">
+                  <div class="widget-post__header">
+                    <h2 class="widget-post__title" id="post-header-title">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      Post text and/or image
+                    </h2>
+                  </div>
+                  <form id="widget-form" class="widget-post__form" name="form" aria-label="post widget">
+                    <div class="widget-post__content">
+                      <label for="post-content" class="sr-only">Share</label>
+                      <textarea name="post" id="post-content" class="widget-post__textarea scroller" placeholder="Post text or description for an image here."></textarea>
+                    </div>
+                    <div class="widget-post__options is--hidden" id="stock-options">
+                    </div>
+                    <div class="widget-post__actions post--actions">
+                      <div class="post-actions__attachments">
+                        <button type="button" class="btn post-actions__upload attachments--btn">
+                          <label for="upload-image" class="post-actions__label">
+                              <i class="fa fa-upload" aria-hidden="true"></i> 
+                            upload image
+                          </label>
+                        </button>
+                        <input type="file" id="upload-image" accept="image/*" multiple>
+                      </div>
+                      <div class="post-actions__widget">
+                        <button class="btn post-actions__publish">publish</button>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+              <br>
+              <hr>
+              <div class="article">
+                <h2>Crew-6 launches to space station</h2>
+                <h5>Jeff Foust | March 2, 2023</h5>
+                <p>A Crew Dragon spacecraft is headed towards the International Space Station three days after a technical problem scrubbed its first launch attempt.</p>
+                <div class="img_main"><img src="images/rocketlaunch.jpg">
+                  <!--dio sa srcem i bookmarkom-->
+                  <div class="heart-bookmark">
+                    <button><i class="fa fa-heart"> </i> BrSr </button>
+                    <button><i class="fa fa-regular fa-bookmark"> </i> BrB </button>
+                  </div>
+                </div>
+
+                <!--novi dio koji se odnosi na postane komentare-->
+                <div class="all-posted-comments"><!--ovaj dio se odnosi na sve postane komentare-->
+                  <div class="posted-comment"> <!--ovaj dio se odnosi na pojedinačne komentare-->
+                    <div class="commenter"><!--dio sa komentatorom-->
+                      <img src="images/avatar.png" class="second_picture">
+                      <h5>
+                        <a href="#">Arlen Donovan</a>
+                      </h5>
+                    </div>
+                    <div class="typed-comment"><!--dio sa boxom koji sadrži upisani komentar-->
+                      <p>Please keep posting, I love your content!</p>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="posted-comment"> <!--ovaj dio se odnosi na pojedinačne komentare-->
+                    <div class="commenter"><!--dio sa komentatorom-->
+                      <img src="images/avatar.png" class="second_picture">
+                      <h5>
+                        <a href="#">Izabelle Colbert</a>
+                      </h5>
+                    </div>
+                    <div class="typed-comment"><!--dio sa boxom koji sadrži upisani komentar-->
+                      <p>I hope nothing bad will happen...</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!--dio sa komentarom-->
+                <div class="comment">
+                  <div class="commenter">
+                    <img src="images/avatar.png" class="second_picture">
+                    <h5>
+                        <a href="#">Laura James</a>
+                    </h5>
+                  </div>
+                  <div class="comment-box-post-button">
+                    <input type="text" class="comment-box" placeholder="Enter comment">
+                    <button class="post-button">Post</button>
+                  </div>
+                </div>
+                <br>
+              </div>
+              <div class="article">
+                <h2>Rocket Lab reconsidering mid-air recovery of Electron boosters</h2>
+                <h5>Jeff Foust | March 1, 2023</h5>
+                <p>The Electron booster, descending under a parachute (right), as seen from the helicopter as it attempted to grapple the parachute. The helicopter released the booster moments later, though. </p>
+                <div class="img_main"><img src="images/parachute.jpg">
+                  <div class="heart-bookmark">
+                    <button><i class="fa fa-heart"> </i> BrSr </button>
+                    <button><i class="fa fa-regular fa-bookmark"> </i> BrB </button>
+                  </div>
+                </div>
+                <div class="comment">
+                  <div class="commenter">
+                    <img src="images/avatar.png" class="second_picture">
+                    <h5>
+                        <a href="#">Laura James</a>
+                    </h5>
+                  </div>
+                  <div class="comment-box-post-button">
+                    <input type="text" class="comment-box" placeholder="Enter comment">
+                    <button class="post-button">Post</button>
+                  </div>
+                </div>
+              </div>
+              <div class="article">
+                <h2>Apple lends Globalstar $252 million for satellite-enabled iPhones</h2>
+                <h5>Jason Rainbow | February 28, 2023</h5>
+                <p>Apple’s iPhone 14 is currently able to send emergency messages via Globalstar satellites from the United States, Canada, France, Germany, Ireland, and the U.K.</p>
+                <div class="img_main"><img src="images/apple_phone.jpg">
+                  <div class="heart-bookmark">
+                    <button><i class="fa fa-heart"> </i> BrSr </button>
+                    <button><i class="fa fa-regular fa-bookmark"> </i> BrB </button>
+                  </div>
+                </div>
+
+                <div class="all-posted-comments"><!--ovaj dio se odnosi na sve postane komentare-->
+                  <div class="posted-comment"> <!--ovaj dio se odnosi na pojedinačne komentare-->
+                    <div class="commenter"><!--dio sa komentatorom-->
+                      <img src="images/avatar.png" class="second_picture">
+                      <h5>
+                        <a href="#">Melissa Parnell</a>
+                      </h5>
+                    </div>
+                    <div class="typed-comment"><!--dio sa boxom koji sadrži upisani komentar-->
+                      <p>What they won't invent, just incredible!</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="comment">
+                  <div class="commenter">
+                    <img src="images/avatar.png" class="second_picture">
+                    <h5>
+                        <a href="#">Laura James</a>
+                    </h5>
+                  </div>
+                  <div class="comment-box-post-button">
+                    <input type="text" class="comment-box" placeholder="Enter comment">
+                    <button class="post-button">Post</button>
+                  </div>
+                </div>
+                <br>
+              </div>
+              <div class="article">
+                <h2>U.S. Army extends Maxar’s contract for 3D geospatial data</h2>
+                <h5>Sandra Erwin | February 27, 2023</h5>
+                <p>The U.S. Army has extended its contract with Maxar Technologies to provide 3D geospatial data used to create immersive digital environments. </p>
+                <div class="img_main"><img src="images/hybrid_Buildings.jpg">
+                  <div class="heart-bookmark">
+                    <button><i class="fa fa-heart"> </i> BrSr </button>
+                    <button><i class="fa fa-regular fa-bookmark"> </i> BrB </button>
+                  </div>
+                </div>
+                <div class="comment">
+                  <div class="commenter">
+                    <img src="images/avatar.png" class="second_picture">
+                    <h5>
+                        <a href="#">Laura James</a>
+                    </h5>
+                  </div>
+                  <div class="comment-box-post-button">
+                    <input type="text" class="comment-box" placeholder="Enter comment">
+                    <button class="post-button">Post</button>
+                  </div>
+                </div>
+                <br>
+              </div>
+              <div class="article">
+                <h2>Startup developing sea-based launch pads</h2>
+                <h5>Jeff Foust | Februray 26, 2023</h5>
+                <p>A startup is proposing one solution to the increasing congestion at major launch sites: build mobile launch pads that operate at sea.</p>
+                <div class="img_main"><img src="images/spaceport-company.jpg">
+                  <div class="heart-bookmark">
+                    <button><i class="fa fa-heart"> </i> BrSr </button>
+                    <button><i class="fa fa-regular fa-bookmark"> </i> BrB </button>
+                  </div>
+                </div>
+                <div class="comment">
+                  <div class="commenter">
+                    <img src="images/avatar.png" class="second_picture">
+                    <h5>
+                        <a href="#">Laura James</a>
+                    </h5>
+                  </div>
+                  <div class="comment-box-post-button">
+                    <input type="text" class="comment-box" placeholder="Enter comment">
+                    <button class="post-button">Post</button>
+                  </div>
+                </div>
+                <br>
+              </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Copyright Martina Marić @FESB 2023 PZI-MarsFeed</p>
+        </div>
+
+      <script src="scripts/scripts.js"></script>
+
+    </body>
+    
+</html>
