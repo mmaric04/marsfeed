@@ -1,6 +1,6 @@
 <?php
 function getDbAccess(){
-    return new DatabaseAccess("MaricM", "MaricM", "MaricM_2022");
+    return new DatabaseAccess("****", "*****", "****");
 }
 
 class DatabaseAccess {
